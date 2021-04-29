@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     
     #3rd_party
     'rest_framework',
-    'rest_framework.authtoken',
+  
     'corsheaders',
 ]
 
@@ -46,12 +46,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'main.urls'
+ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'frontend/build',],
+        'DIRS': [BASE_DIR / '../frontend/build',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -64,7 +64,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'main.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.application'
 
 
 # Database
@@ -115,11 +115,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS=[BASE_DIR / 'frontend/build/static',]
-STATIC_ROOT = BASE_DIR / 'frontend/build/static-root'
+STATICFILES_DIRS=[BASE_DIR / '../frontend/build/static',]
+STATIC_ROOT = BASE_DIR / '../frontend/build/static-root'
 
 MEDIA_URL='/media/'
-MEDIA_ROOT = BASE_DIR / 'frontend/media'
+MEDIA_ROOT = BASE_DIR / '../frontend/media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

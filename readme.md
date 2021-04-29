@@ -7,6 +7,7 @@ git clone https://github.com/icerahi/django_react_boilerplate.git
 
 # Django
 ```
+cd backend
 virtualenv -p python3 venv
 source venv/bin/activate
 pip install requirements.txt
